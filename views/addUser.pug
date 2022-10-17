@@ -1,0 +1,21 @@
+extends layout
+
+block content
+        .container-fluid.bg-dark.mb-5 
+            h1.text-center.text-info.p-5 Add Users
+        
+        .container.mt-5
+            form(action="/users/add" method="POST")
+                div.input-group.input-group-lg
+                    span.input-group-text Your Name
+                    input(type="text" class="form-control" name="name" placeholder="Enter Your Name" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg") 
+                br
+                div.input-group.input-group-lg
+                    span.input-group-text Your Skills
+                    input(type="text" class="form-control" name="skills" placeholder="Enter Your Skills" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg") 
+                br
+                button(type="submit").btn.btn-primary.text-light.mt-3.py-2.px-5 Submit
+                br.mb-5
+        
+        include footer
+        

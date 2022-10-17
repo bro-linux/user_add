@@ -1,0 +1,19 @@
+extends layout
+
+block content
+    .container-fluid.bg-dark
+        h1.text-primary.p-5 Welcome to User add App
+    
+    .container 
+      h2.
+        Dastur shunchaki zerikishdan yasaldi :)
+
+      a(href="/users").btn.btn-primary.mx-2.text-warning Users
+      
+      a(href="/users/add").btn.btn-primary.mx-2.text-warning Add Users 
+    
+    - for(let i=0; i<15; i++)
+        br.m-5 
+
+    include footer
+    

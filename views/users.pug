@@ -1,0 +1,35 @@
+extends layout
+
+block content
+    // -var n = 0;
+    // -var i = 0;
+    // while true
+
+
+    .container-fluid.bg-dark
+        h1.text-center.text-info.p-5 Users 
+
+    
+    .container
+        table.table.table-striped.table-responsive.table-hover
+            thead.table-dark
+                tr
+                    th(scope="col") N
+                    th(scope="col") Id
+                    th(scope="col") Name
+                    th(scope="col") Skills
+            tbody
+                 if(users)
+                  each val in users
+                     -var n = 1
+                     tr
+                        th(scope="row") #{users.indexOf(val) + 1}
+                        td #{val.id}
+                        td #{val.name}
+                        td #{val.skills}
+
+
+    br.mt-5
+
+    include ./footer
+            
